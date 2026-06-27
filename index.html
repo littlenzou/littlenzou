@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Nzou | Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #0A0A0A;
+            --gold: #C8A951;
+            --sienna: #D4622A;
+            --grey-text: #6B6B6B;
+            --grey-light: #F5F5F5;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-ui: 'Inter', system-ui, sans-serif;
+            --font-mono: 'Space Mono', monospace;
+            --ease: 0.38s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-display);
+            background: var(--white);
+            color: var(--black);
+            overflow-x: hidden;
+            line-height: 1.7;
+            font-size: 18px;
+        }
+        a { text-decoration: none; color: inherit; }
+        
+        #coming-soon {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 24px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .coming-soon-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 50% at 18% 80%, rgba(200,169,81,0.07) 0%, transparent 58%),
+                radial-gradient(ellipse 50% 40% at 82% 18%, rgba(212,98,42,0.05) 0%, transparent 58%);
+            z-index: 0;
+        }
+        
+        .coming-soon-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+        }
+        
+        .coming-soon-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeUpIn 0.8s ease forwards 0.2s;
+        }
+        
+        .coming-soon-title {
+            font-family: var(--font-display);
+            font-size: clamp(3.4rem, 9vw, 5.4rem);
+            font-weight: 300;
+            line-height: 1.0;
+            letter-spacing: -0.01em;
+            color: var(--black);
+            margin-bottom: 24px;
+            opacity: 0;
+            animation: fadeUpIn 0.8s ease forwards 0.38s;
+        }
+        
+        .coming-soon-title em {
+            font-style: italic;
+            color: var(--gold);
+        }
+        
+        .coming-soon-text {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: var(--grey-text);
+            max-width: 520px;
+            margin: 0 auto 48px;
+            line-height: 1.85;
+            opacity: 0;
+            animation: fadeUpIn 0.8s ease forwards 0.52s;
+        }
+        
+        .coming-soon-divider {
+            border-top: 1px solid #E0E0E0;
+            padding-top: 32px;
+            opacity: 0;
+            animation: fadeUpIn 0.8s ease forwards 0.66s;
+        }
+        
+        .coming-soon-label {
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .coming-soon-label::before,
+        .coming-soon-label::after {
+            content: '';
+            flex: 0 0 24px;
+            height: 1px;
+            background: var(--gold);
+        }
+        
+        .coming-soon-contact {
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+        }
+        
+        .coming-soon-contact a {
+            color: var(--black);
+            font-weight: 600;
+            transition: color var(--ease);
+            border-bottom: 1.5px solid var(--gold);
+            padding-bottom: 2px;
+        }
+        
+        .coming-soon-contact a:hover {
+            color: var(--gold);
+        }
+        
+        @keyframes fadeUpIn {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .coming-soon-title {
+                font-size: 2.4rem;
+            }
+            .coming-soon-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="coming-soon">
+        <div class="coming-soon-bg"></div>
+        <div class="coming-soon-content">
+            <span class="coming-soon-eyebrow">DUBAI HUB // GLOBAL DELIVERY</span>
+            <h1 class="coming-soon-title">Something <em>New</em> is Building</h1>
+            <p class="coming-soon-text">
+                The Little Nzou design studio and asset vault is currently under maintenance. We are updating our portfolio for the season ahead.
+            </p>
+            <div class="coming-soon-divider">
+                <div class="coming-soon-label">DIRECT INQUIRIES</div>
+                <div class="coming-soon-contact">
+                    <a href="mailto:info@littlenzou.com">info@littlenzou.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
