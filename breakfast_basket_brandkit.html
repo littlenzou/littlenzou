@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>LITTLE NZOU Creative Studio | UAE</title>
-<meta name="description" content="LITTLE NZOU Creative Studio — a cinematic micro-studio in the UAE specialising in video editing, brand design, motion graphics, and digital creativity." />
+<title>Breakfast Basket — Full Brand Kit | LITTLE NZOU Creative Studio</title>
+<meta name="description" content="Full brand identity case study for Breakfast Basket (ZW): logo system, colour palette, typography, and packaging design across coffee, honey, granola and oats product lines." />
 
 <!-- FAVICON / WEBSITE TAB ICON -->
 <link rel="icon" type="image/png" href="website_tab_icon.png" />
@@ -56,7 +56,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* ============================================================
-   CURSOR FX — glow cursor + magnetic hover + hero parallax
+   CURSOR FX — glow cursor + magnetic hover + idle elephant doodle
    (desktop / fine-pointer devices only; auto-disabled on touch
    and for users who prefer reduced motion)
    ============================================================ */
@@ -133,9 +133,6 @@ body.cursor-fx-on .magnetic { position: relative; }
 
 @media (prefers-reduced-motion: reduce) {
   #idle-elephant { display: none !important; }
-}
-
-@media (prefers-reduced-motion: reduce) {
   .cursor-glow, .cursor-dot { display: none !important; }
 }
 
@@ -151,23 +148,12 @@ nav {
 }
 nav.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.07); }
 .nav-logo-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
+  display: flex; flex-direction: column; align-items: center; text-decoration: none;
 }
-.nav-logo-icon {
-  height: 38px;
-  width: auto;
-  object-fit: contain;
-  margin-bottom: 2px;
-  display: block;
-}
+.nav-logo-icon { height: 38px; width: auto; object-fit: contain; margin-bottom: 2px; display: block; }
 .nav-logo {
-  font-family: var(--font-main-nzou);
-  font-size: 1.35rem; font-weight: 700; letter-spacing: 0.01em;
-  text-transform: uppercase;
-  line-height: 1;
+  font-family: var(--font-main-nzou); font-size: 1.35rem; font-weight: 700;
+  letter-spacing: 0.01em; text-transform: uppercase; line-height: 1;
 }
 .nav-logo span { color: var(--gold); font-style: normal; }
 .nav-links { display: flex; gap: 36px; list-style: none; align-items: center; }
@@ -178,73 +164,121 @@ nav.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.07); }
 }
 .nav-links a::after {
   content: ''; position: absolute; left: 0; bottom: -3px;
-  width: 0; height: 1px; background: var(--gold);
-  transition: width var(--ease);
+  width: 0; height: 1px; background: var(--gold); transition: width var(--ease);
 }
 .nav-links a:hover { color: var(--gold); }
 .nav-links a:hover::after { width: 100%; }
 .nav-cta {
   background: var(--black) !important; color: var(--white) !important;
-  padding: 9px 24px !important; border-radius: 1px;
-  transition: background var(--ease) !important;
+  padding: 9px 24px !important; border-radius: 1px; transition: background var(--ease) !important;
 }
 .nav-cta:hover { background: var(--gold) !important; color: var(--black) !important; }
 .nav-cta::after { display: none !important; }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; }
 .hamburger span { display: block; width: 26px; height: 1.5px; background: var(--black); }
 
-/* HERO */
-#home {
-  position: relative; min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
-  text-align: center; padding: 140px 24px 140px;
-  overflow: hidden; z-index: 1;
+/* HERO HEADER */
+.page-header {
+  padding: 160px 24px 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(200,169,81,0.06) 0%, transparent 70%);
 }
-.hero-bg {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 70% 50% at 18% 80%, rgba(200,169,81,0.07) 0%, transparent 58%),
-    radial-gradient(ellipse 50% 40% at 82% 18%, rgba(212,98,42,0.05) 0%, transparent 58%);
-}
-.hero-content { position: relative; z-index: 2; max-width: 880px; }
-.hero-eyebrow {
+.page-eyebrow {
   font-family: var(--font-mono); font-size: 0.62rem;
   letter-spacing: 0.28em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 30px;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s;
+  color: var(--gold); margin-bottom: 16px;
 }
-.hero-title {
+.page-title {
   font-family: var(--font-main-nzou);
-  font-size: clamp(3.4rem, 9vw, 7.2rem);
-  font-weight: 700; line-height: 1.0; letter-spacing: -0.01em;
-  color: var(--black); margin-bottom: 24px;
-  text-transform: uppercase;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.38s;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  font-weight: 700; line-height: 1.1; letter-spacing: -0.01em;
+  color: var(--black); margin-bottom: 16px; text-transform: uppercase;
 }
-.hero-title strong {
-  font-family: var(--font-studio);
-  font-weight: 400;
-  text-transform: none;
+.page-title em { font-style: italic; color: var(--gold); font-family: var(--font-display); font-weight: 400; text-transform: none; }
+.page-sub {
+  font-family: var(--font-display); font-size: 1.15rem; font-weight: 300;
+  color: var(--grey-text); max-width: 600px; margin: 0 auto; line-height: 1.8;
 }
-.hero-title em { font-style: normal; color: var(--gold); }
-.hero-tagline {
-  font-family: var(--font-tagline); font-size: 0.85rem;
-  font-weight: 500;
-  letter-spacing: 0.12em; text-transform: none;
-  color: var(--grey-text); margin-bottom: 36px;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.52s;
+
+/* SECTION & GRID */
+section { position: relative; z-index: 1; }
+.section-inner { max-width: var(--max-w); margin: 0 auto; padding: 40px 24px 100px; }
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
 }
-.hero-tagline .sep { color: var(--sienna); margin: 0 8px; }
-.hero-intro {
-  font-family: var(--font-display); font-size: 1.2rem; font-weight: 300;
-  color: var(--grey-text); max-width: 580px;
-  margin: 0 auto 52px; line-height: 1.85;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.66s;
+
+.gallery-card {
+  background: var(--white);
+  border: 1px solid var(--grey-mid);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
-.hero-ctas {
-  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s;
-  margin-bottom: 40px;
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+.card-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: var(--grey-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.card-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+.gallery-card:hover .card-img-wrap img {
+  transform: scale(1.05);
+}
+.card-overlay {
+  position: absolute; inset: 0;
+  background: rgba(10,10,10,0.5);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity var(--ease);
+}
+.gallery-card:hover .card-overlay { opacity: 1; }
+.card-view-ring {
+  width: 44px; height: 44px; border: 1.5px solid var(--gold);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  color: var(--gold); background: rgba(10,10,10,0.4);
+}
+.card-info {
+  padding: 16px 20px;
+  border-top: 1px solid var(--grey-mid);
+  background: var(--white);
+  flex-grow: 1;
+}
+.card-tag {
+  font-family: var(--font-mono); font-size: 0.58rem;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 4px;
+}
+.card-title {
+  font-family: var(--font-display); font-size: 1.1rem;
+  font-weight: 600; color: var(--black); line-height: 1.3;
+}
+
+/* BACK BUTTON CONTAINER */
+.back-bar {
+  text-align: center;
+  margin-top: 60px;
 }
 .btn-primary {
   display: inline-flex; align-items: center; gap: 10px;
@@ -256,374 +290,32 @@ nav.scrolled { box-shadow: 0 2px 32px rgba(0,0,0,0.07); }
   transition: background var(--ease), color var(--ease), border-color var(--ease), transform var(--ease);
 }
 .btn-primary:hover { background: var(--gold); border-color: var(--gold); color: var(--black); transform: translateY(-2px); }
-.btn-outline {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: transparent; color: var(--black);
-  padding: 14px 38px;
-  font-family: var(--font-ui); font-size: 0.7rem; font-weight: 600;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  border: 1.5px solid var(--black); border-radius: 1px; cursor: pointer;
-  transition: background var(--ease), color var(--ease), transform var(--ease);
-}
-.btn-outline:hover { background: var(--black); color: var(--white); transform: translateY(-2px); }
 
-/* SCROLL MOVED LOWER */
-.hero-scroll {
-  position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
-  opacity: 0; animation: fadeUp 1s ease forwards 1.2s;
-  z-index: 2;
+/* LIGHTBOX MODAL */
+.modal {
+  display: none; position: fixed; inset: 0; z-index: 200;
+  background: rgba(10,10,10,0.92); backdrop-filter: blur(8px);
+  align-items: center; justify-content: center; padding: 24px;
 }
-.scroll-line {
-  width: 1px; height: 42px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-  animation: scrollPulse 2.2s ease infinite;
+.modal.open { display: flex; }
+.modal-content {
+  position: relative; max-width: 90vw; max-height: 85vh;
+  display: flex; flex-direction: column; align-items: center;
 }
-.scroll-label {
-  font-family: var(--font-mono); font-size: 0.58rem;
-  letter-spacing: 0.22em; text-transform: uppercase; color: var(--grey-text);
+.modal-content img {
+  max-width: 100%; max-height: 75vh; object-fit: contain;
+  border-radius: 2px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
-
-/* SECTION SHARED */
-section { position: relative; z-index: 1; }
-.section-inner { max-width: var(--max-w); margin: 0 auto; padding: 100px 24px; }
-.section-label {
-  font-family: var(--font-mono); font-size: 0.62rem;
-  letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
-  margin-bottom: 14px;
-  display: flex; align-items: center; gap: 14px;
+.modal-caption {
+  font-family: var(--font-display); font-size: 1.3rem;
+  color: var(--white); margin-top: 16px; text-align: center;
 }
-.section-label::after { content: ''; flex: 0 0 36px; height: 1px; background: var(--gold); }
-.section-title {
-  font-family: var(--font-display);
-  font-size: clamp(2.1rem, 4vw, 3.3rem);
-  font-weight: 400; line-height: 1.15; letter-spacing: -0.01em;
-  color: var(--black); margin-bottom: 18px;
+.modal-close {
+  position: absolute; top: -45px; right: 0;
+  color: var(--white); font-size: 2rem; cursor: pointer;
+  background: none; border: none; line-height: 1; transition: color var(--ease);
 }
-.section-title em { color: var(--gold); font-style: italic; }
-.section-sub {
-  font-family: var(--font-display); font-size: 1.05rem; font-weight: 300;
-  color: var(--grey-text); max-width: 560px; line-height: 1.8; margin-bottom: 56px;
-}
-
-/* ABOUT */
-#about { background: var(--white); }
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.about-visual { position: relative; }
-.about-portrait-box {
-  width: 100%; aspect-ratio: 4/5;
-  background: var(--grey-light); border-radius: 2px; overflow: hidden;
-  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 14px;
-}
-.portrait-badge {
-  position: absolute; bottom: -22px; right: -22px;
-  background: var(--gold); color: var(--black);
-  width: 106px; height: 106px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  flex-direction: column; text-align: center;
-  box-shadow: 0 10px 28px rgba(200,169,81,0.28);
-}
-.portrait-badge .num { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; line-height: 1; }
-.portrait-badge .lbl { font-family: var(--font-ui); font-size: 0.52rem; letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px; }
-.about-philosophy {
-  padding: 26px 28px;
-  border-left: 2px solid var(--gold); background: var(--grey-light);
-  border-radius: 0 2px 2px 0; margin-bottom: 32px;
-}
-.about-philosophy p {
-  font-family: var(--font-display); font-size: 1.1rem; font-style: italic;
-  font-weight: 400; line-height: 1.7; color: var(--black);
-}
-.about-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.pillar {
-  padding: 20px; border: 1px solid var(--grey-mid); border-radius: 2px;
-  transition: border-color var(--ease), transform var(--ease);
-}
-.pillar:hover { border-color: var(--gold); transform: translateY(-2px); }
-.pillar-icon-line {
-  width: 28px; height: 2px; background: var(--gold); margin-bottom: 12px;
-}
-.pillar h4 {
-  font-family: var(--font-ui); font-size: 0.72rem; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px;
-}
-.pillar p { font-family: var(--font-display); font-size: 0.92rem; font-weight: 300; color: var(--grey-text); line-height: 1.6; }
-
-/* CAROUSEL BASE */
-.carousel-wrap { position: relative; }
-.carousel-outer {
-  overflow: hidden; cursor: grab;
-  touch-action: pan-y;
-}
-.carousel-track a { -webkit-user-drag: none; user-drag: none; }
-.carousel-outer:active { cursor: grabbing; }
-.carousel-track {
-  display: flex; gap: 24px;
-  transition: transform 0.45s cubic-bezier(0.4,0,0.2,1);
-  will-change: transform;
-  user-select: none;
-}
-.carousel-controls {
-  display: flex; align-items: center; gap: 12px; margin-top: 28px;
-}
-.carousel-dots { display: flex; gap: 8px; flex: 1; }
-.c-dot {
-  width: 24px; height: 2px; background: var(--grey-mid);
-  border-radius: 1px; cursor: pointer;
-  transition: background var(--ease), width var(--ease);
-}
-.c-dot.active { background: var(--gold); width: 40px; }
-.c-arrow {
-  width: 44px; height: 44px;
-  background: var(--white); border: 1.5px solid var(--grey-mid);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  cursor: pointer; color: var(--black);
-  transition: background var(--ease), border-color var(--ease), color var(--ease), transform var(--ease);
-  flex-shrink: 0;
-}
-.c-arrow:hover { background: var(--black); border-color: var(--black); color: var(--white); transform: scale(1.05); }
-.c-arrow:disabled, .c-arrow.disabled { opacity: 0.3; pointer-events: none; }
-.c-arrow svg { display: block; }
-
-/* PORTFOLIO */
-#portfolio { background: var(--grey-light); }
-.portfolio-filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
-.filter-btn {
-  padding: 8px 20px;
-  font-family: var(--font-mono); font-size: 0.62rem;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  border: 1px solid var(--grey-mid); background: var(--white);
-  border-radius: 1px; cursor: pointer; color: var(--grey-text);
-  transition: all var(--ease);
-}
-.filter-btn.active, .filter-btn:hover { background: var(--black); border-color: var(--black); color: var(--white); }
-
-.port-card {
-  flex: 0 0 340px; min-width: 0;
-  border-radius: 2px; overflow: hidden;
-  position: relative; cursor: pointer;
-  display: block;
-}
-.port-card-inner {
-  aspect-ratio: 4/3;
-  display: flex; align-items: flex-end; padding: 24px;
-  position: relative; transition: transform 0.4s ease;
-  background-size: cover; background-position: center;
-}
-.port-card:hover .port-card-inner { transform: scale(1.02); }
-.port-overlay {
-  position: absolute; inset: 0;
-  background: rgba(10,10,10,0.7);
-  display: flex; align-items: center; justify-content: center;
-  opacity: 0; transition: opacity var(--ease);
-}
-.port-card:hover .port-overlay { opacity: 1; }
-.port-view-ring {
-  width: 52px; height: 52px; border: 1.5px solid var(--gold);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  color: var(--gold);
-}
-.port-meta { position: relative; z-index: 1; }
-.port-cat {
-  font-family: var(--font-mono); font-size: 0.58rem;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 4px;
-}
-.port-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; color: var(--white); line-height: 1.2; }
-
-/* CASE STUDIES CAROUSEL */
-.case-card {
-  flex: 0 0 360px; min-width: 0;
-  background: var(--white); border: 1px solid var(--grey-mid); border-radius: 2px;
-  overflow: hidden; transition: box-shadow var(--ease), transform var(--ease);
-  cursor: pointer;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-.case-card:hover { box-shadow: 0 14px 40px rgba(0,0,0,0.09); transform: translateY(-3px); }
-.case-card-head {
-  height: 120px; display: flex; align-items: center; padding: 0 24px;
-}
-.case-card-head-text {
-  font-family: var(--font-display); font-size: 2rem;
-  font-weight: 700; font-style: italic;
-  color: rgba(255,255,255,0.13); letter-spacing: -0.02em;
-}
-.case-body { padding: 22px 24px; }
-.case-tag {
-  font-family: var(--font-mono); font-size: 0.58rem;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 8px;
-}
-.case-body h4 {
-  font-family: var(--font-display); font-size: 1.1rem;
-  font-weight: 600; margin-bottom: 8px; line-height: 1.3;
-}
-.case-body p { font-family: var(--font-display); font-size: 0.9rem; font-weight: 300; color: var(--grey-text); line-height: 1.65; }
-
-/* PROCESS */
-#process { background: var(--navy); }
-#process .section-title { color: var(--white); }
-#process .section-sub { color: rgba(255,255,255,0.55); }
-#process .section-label { color: var(--gold); }
-
-.process-card {
-  flex: 0 0 300px; min-width: 0;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 2px; padding: 36px 28px;
-  position: relative;
-  transition: background var(--ease), border-color var(--ease), transform var(--ease);
-}
-.process-card:hover {
-  background: rgba(200,169,81,0.07);
-  border-color: rgba(200,169,81,0.35);
-  transform: translateY(-3px);
-}
-.process-step-num {
-  font-family: var(--font-display); font-size: 4rem; font-weight: 700;
-  line-height: 1; color: rgba(200,169,81,0.12);
-  position: absolute; top: 20px; right: 20px;
-}
-.process-icon-line { width: 32px; height: 2px; background: var(--gold); margin-bottom: 20px; }
-.process-card h3 {
-  font-family: var(--font-display); font-size: 1.25rem;
-  font-weight: 600; color: var(--white); margin-bottom: 10px; line-height: 1.3;
-}
-.process-card p { font-family: var(--font-display); font-size: 0.9rem; font-weight: 300; color: rgba(255,255,255,0.55); line-height: 1.7; }
-.process-card .process-duration {
-  font-family: var(--font-mono); font-size: 0.58rem;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--gold); margin-top: 18px;
-  padding-top: 18px; border-top: 1px solid rgba(255,255,255,0.08);
-}
-#process .c-arrow { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.15); color: var(--white); }
-#process .c-arrow:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
-#process .c-dot { background: rgba(255,255,255,0.2); }
-#process .c-dot.active { background: var(--gold); }
-
-/* SHOP */
-#shop { background: var(--white); }
-.shop-cats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 40px; }
-.cat-pill {
-  padding: 7px 18px;
-  font-family: var(--font-mono); font-size: 0.6rem;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  border: 1px solid var(--grey-mid); border-radius: 20px;
-  color: var(--grey-text); cursor: pointer;
-  transition: all var(--ease);
-}
-.cat-pill:hover, .cat-pill.active { border-color: var(--gold); color: var(--gold); background: rgba(200,169,81,0.07); }
-.shop-card {
-  flex: 0 0 300px; min-width: 0;
-  background: var(--grey-light); border: 1px solid var(--grey-mid);
-  border-radius: 2px; padding: 36px 28px;
-  display: flex; flex-direction: column;
-  transition: border-color var(--ease), transform var(--ease), box-shadow var(--ease);
-}
-.shop-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.07); }
-.shop-card-icon-line { width: 28px; height: 2px; background: var(--gold); margin-bottom: 20px; }
-.shop-card h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin-bottom: 10px; }
-.shop-card p { font-family: var(--font-display); font-size: 0.9rem; font-weight: 300; color: var(--grey-text); line-height: 1.65; flex: 1; margin-bottom: 20px; }
-.shop-price { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.12em; color: var(--sienna); margin-bottom: 20px; }
-.btn-shop {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  padding: 11px 22px; background: var(--black); color: var(--white);
-  font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase; border-radius: 1px;
-  transition: background var(--ease);
-}
-.btn-shop:hover { background: var(--gold); color: var(--black); }
-.shop-banner {
-  margin-top: 48px; padding: 40px 52px;
-  background: var(--navy); border-radius: 2px;
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 24px; flex-wrap: wrap;
-}
-.shop-banner h3 {
-  font-family: var(--font-display); font-size: 1.6rem;
-  font-weight: 400; font-style: italic; color: var(--white); margin-bottom: 6px;
-}
-.shop-banner p { font-family: var(--font-display); font-size: 0.95rem; font-weight: 300; color: rgba(255,255,255,0.5); }
-
-/* TUTORIALS */
-#tutorials { background: var(--grey-light); }
-.tut-card {
-  flex: 0 0 340px; min-width: 0;
-  background: var(--white); border: 1px solid var(--grey-mid); border-radius: 2px;
-  overflow: hidden; display: block; text-decoration: none; color: inherit;
-  transition: box-shadow var(--ease), transform var(--ease);
-}
-.tut-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,0.08); transform: translateY(-3px); }
-.tut-thumb {
-  aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center;
-  position: relative; overflow: hidden;
-}
-.play-ring {
-  width: 54px; height: 54px; background: rgba(255,255,255,0.9);
-  border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  position: relative; z-index: 1;
-  transition: transform var(--ease), background var(--ease);
-}
-.tut-card:hover .play-ring { transform: scale(1.1); background: var(--gold); }
-.tut-body { padding: 22px 24px; }
-.tut-tag { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-.tut-body h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 8px; line-height: 1.3; color: var(--black); }
-.tut-body p { font-family: var(--font-display); font-size: 0.88rem; font-weight: 300; color: var(--grey-text); line-height: 1.65; margin-bottom: 16px; }
-.tut-link {
-  font-family: var(--font-ui); font-size: 0.68rem; font-weight: 600;
-  letter-spacing: 0.08em; text-transform: uppercase; color: var(--sienna);
-  display: inline-flex; align-items: center; gap: 6px;
-  transition: gap var(--ease);
-}
-.tut-card:hover .tut-link { gap: 10px; }
-
-/* CONTACT */
-#contact { background: var(--white); }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: stretch;
-}
-.contact-info h3 {
-  font-family: var(--font-display); font-size: 1.8rem;
-  font-weight: 400; margin-bottom: 16px; letter-spacing: -0.01em; line-height: 1.3;
-}
-.contact-info h4 {
-  font-family: var(--font-display); font-size: 1.8rem;
-  font-weight: 400; margin-top: 32px; margin-bottom: 16px; letter-spacing: -0.01em; line-height: 1.3;
-}
-.contact-info p { font-family: var(--font-display); font-size: 1rem; font-weight: 300; color: var(--grey-text); line-height: 1.8; margin-bottom: 36px; }
-.contact-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.contact-row-line { width: 28px; height: 1px; background: var(--gold); flex-shrink: 0; }
-.contact-row-text { font-family: var(--font-display); font-size: 0.95rem; color: var(--grey-text); }
-.contact-row-text a { color: var(--black); font-weight: 500; transition: color var(--ease); }
-.contact-row-text a:hover { color: var(--gold); }
-.social-links { display: flex; gap: 10px; margin-top: 28px; }
-.social-link {
-  width: 42px; height: 42px; background: var(--grey-light);
-  border: 1px solid var(--grey-mid); border-radius: 1px;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; color: var(--black);
-  transition: all var(--ease);
-}
-.social-link:hover { background: var(--black); border-color: var(--black); color: var(--white); transform: translateY(-2px); }
-.social-link svg { stroke: currentColor; }
-
-.contact-map {
-  width: 100%;
-  min-height: 400px;
-  border-radius: 2px;
-  overflow: hidden;
-  border: 1px solid var(--grey-mid);
-}
-.contact-map iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
+.modal-close:hover { color: var(--gold); }
 
 /* FOOTER */
 footer { background: var(--black); padding: 52px 24px 32px; position: relative; z-index: 1; }
@@ -643,15 +335,6 @@ footer { background: var(--black); padding: 52px 24px 32px; position: relative; 
 .footer-copy { font-family: var(--font-ui); font-size: 0.7rem; color: rgba(255,255,255,0.22); }
 .footer-loc { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.14em; color: rgba(255,255,255,0.22); }
 
-/* ANIMATIONS */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes scrollPulse { 0%,100% { opacity: 0.3; } 50% { opacity: 1; } }
-.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-d1 { transition-delay: 0.1s; }
-.reveal-d2 { transition-delay: 0.2s; }
-.reveal-d3 { transition-delay: 0.3s; }
-
 /* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 18px 24px; }
@@ -663,20 +346,102 @@ footer { background: var(--black); padding: 52px 24px 32px; position: relative; 
     background: var(--white); padding: 24px 28px; gap: 20px;
     border-bottom: 1px solid var(--grey-mid); z-index: 99;
   }
-  .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-visual { max-width: 320px; }
-  .about-pillars { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+/* ============================================================
+   BRAND KIT CASE STUDY — page-specific sections
+   ============================================================ */
+.section-label {
+  font-family: var(--font-mono); font-size: 0.62rem;
+  letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 14px;
 }
-@media (max-width: 600px) {
-  .shop-banner { padding: 28px 24px; }
-  .section-inner { padding: 72px 20px; }
+.section-label::after { content: ''; flex: 0 0 36px; height: 1px; background: var(--gold); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, 3.6vw, 2.8rem);
+  font-weight: 400; line-height: 1.15; letter-spacing: -0.01em;
+  color: var(--black); margin-bottom: 18px;
+}
+.section-title em { color: var(--gold); font-style: italic; }
+.section-sub {
+  font-family: var(--font-display); font-size: 1.02rem; font-weight: 300;
+  color: var(--grey-text); max-width: 640px; line-height: 1.8; margin-bottom: 44px;
+}
+.brandkit-block { padding: 8px 0 68px; border-bottom: 1px solid var(--grey-mid); margin-bottom: 68px; }
+.brandkit-block:last-of-type { border-bottom: none; }
+
+/* Brand overview */
+.overview-grid {
+  display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center;
+}
+.overview-logo-card {
+  background: var(--grey-light); border: 1px solid var(--grey-mid);
+  border-radius: 2px; padding: 48px 32px; display: flex; align-items: center; justify-content: center;
+}
+.overview-logo-card img { max-width: 100%; height: auto; }
+.overview-text p { font-size: 1rem; color: #333; margin-bottom: 18px; line-height: 1.85; }
+.quick-facts { list-style: none; margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+.quick-facts li { font-family: var(--font-ui); font-size: 0.85rem; }
+.quick-facts .fact-label {
+  display: block; font-family: var(--font-mono); font-size: 0.6rem;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px;
+}
+
+/* Logo variants */
+.variants-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.variant-card {
+  border: 1px solid var(--grey-mid); border-radius: 2px; overflow: hidden;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+.variant-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 12px 32px rgba(0,0,0,0.08); }
+.variant-card-img {
+  aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;
+  padding: 28px; background: var(--grey-light);
+}
+.variant-card.dark .variant-card-img { background: var(--navy); }
+.variant-card-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.variant-card-label {
+  padding: 14px 18px; border-top: 1px solid var(--grey-mid);
+  font-family: var(--font-ui); font-size: 0.72rem; letter-spacing: 0.06em;
+  text-transform: uppercase; color: #333;
+}
+
+/* Colour palette */
+.palette-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.palette-swatch { border: 1px solid var(--grey-mid); border-radius: 2px; overflow: hidden; }
+.swatch-color { height: 130px; }
+.swatch-info { padding: 16px 20px; background: var(--white); }
+.swatch-name { font-family: var(--font-display); font-size: 1.05rem; margin-bottom: 4px; }
+.swatch-hex { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; color: var(--grey-text); text-transform: uppercase; }
+.swatch-role { font-family: var(--font-ui); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-top: 6px; }
+
+/* Typography */
+.type-card {
+  border: 1px solid var(--grey-mid); border-radius: 2px; padding: 36px;
+  background: var(--grey-light);
+}
+.type-card img { max-width: 100%; height: auto; display: block; }
+.type-caption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; margin-top: 22px; font-family: var(--font-ui); font-size: 0.78rem; color: var(--grey-text); }
+.type-caption strong { color: var(--black); }
+
+/* Packaging gallery reuses .gallery-grid / .gallery-card from the logo gallery styles above */
+.pkg-note {
+  font-family: var(--font-ui); font-size: 0.78rem; color: var(--grey-text);
+  margin-top: -20px; margin-bottom: 44px; max-width: 640px; line-height: 1.7;
+}
+
+@media (max-width: 860px) {
+  .overview-grid { grid-template-columns: 1fr; gap: 36px; }
+  .variants-grid { grid-template-columns: 1fr; }
+  .palette-grid { grid-template-columns: 1fr; }
+  .quick-facts { grid-template-columns: 1fr 1fr; }
 }
 </style>
 </head>
 <body>
 
 <canvas id="doodle-canvas"></canvas>
+
 <div class="cursor-glow" id="cursor-glow"></div>
 <div class="cursor-dot" id="cursor-dot"></div>
 
@@ -715,501 +480,226 @@ footer { background: var(--black); padding: 52px 24px 32px; position: relative; 
   </div>
 </div>
 
+
 <!-- NAV -->
 <nav id="main-nav">
-  <a href="#home" class="nav-logo-container">
+  <a href="index.html#home" class="nav-logo-container">
     <img src="website_tab_icon.png" alt="Little Nzou Icon" class="nav-logo-icon" />
     <span class="nav-logo">LITTLE <span>NZOU</span></span>
   </a>
   <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#shop">Shop</a></li>
-    <li><a href="#tutorials">Tutorials</a></li>
-    <li><a href="#contact" class="nav-cta magnetic">Get in Touch</a></li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#portfolio">Portfolio</a></li>
+    <li><a href="index.html#process">Process</a></li>
+    <li><a href="index.html#shop">Shop</a></li>
+    <li><a href="index.html#tutorials">Tutorials</a></li>
+    <li><a href="index.html#contact" class="nav-cta magnetic">Get in Touch</a></li>
   </ul>
   <button class="hamburger" id="hamburger" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
 </nav>
 
-<!-- HERO -->
-<section id="home">
-  <div class="hero-bg" data-parallax="0.15"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow" data-parallax="0.35">UAE &nbsp;·&nbsp; Creative Studio &nbsp;·&nbsp; Est. 2020</p>
-    <h1 class="hero-title" data-parallax="0.25">LITTLE <em>NZOU</em><br><strong>Creative Studio</strong></h1>
-    <p class="hero-tagline" data-parallax="0.4">Imagination <span class="sep">/</span> Inspiration <span class="sep">/</span> Manifestation <span class="sep">.</span></p>
-    <p class="hero-intro" data-parallax="0.5">Little Nzou helps creators and growing businesses eliminate weak branding and messy content with high-impact graphics and video design, so you can build a stand-out visual presence that commands attention.</p>
-    <div class="hero-ctas" data-parallax="0.6">
-      <a href="#portfolio" class="btn-primary magnetic">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 3l14 9-14 9V3z"/></svg>
-        View Portfolio
+<!-- PAGE HEADER -->
+<header class="page-header" id="page-header">
+  <p class="page-eyebrow" data-parallax="0.3">Case Study · Full Brand Identity</p>
+  <h1 class="page-title" data-parallax="0.22">Breakfast Basket <em>Brand Kit</em></h1>
+  <p class="page-sub" data-parallax="0.4">A complete visual identity system for a Zimbabwean breakfast-foods house — logo suite, colour and type standards, and a packaging design language carried across coffee, honey, granola and oats.</p>
+</header>
+
+<!-- BRAND OVERVIEW -->
+<section>
+  <div class="section-inner" style="padding-top:8px;">
+
+    <div class="brandkit-block">
+      <p class="section-label">Brand Overview</p>
+      <h2 class="section-title">A pantry staple, <em>rebuilt</em></h2>
+      <div class="overview-grid">
+        <div class="overview-logo-card">
+          <img src="breakfast_logo_concept_1_2_trans.png" alt="Breakfast Basket primary logo" />
+        </div>
+        <div class="overview-text">
+          <p>Breakfast Basket (ZW) is a Zimbabwean breakfast-foods house producing coffee, honey, granola and oats for local and regional shelves. The brand needed one identity system that could hold together across a genuinely varied product range — a bold single-origin coffee, a delicate honey jar, and a family of cereal packaging — without splintering into unrelated designs per product.</p>
+          <p>We built a master brand system anchored on a wheat-and-ribbon mark, a fixed three-colour palette, and two paired typefaces, then applied it as a flexible packaging language: a striking export-facing black-and-gold coffee line under its own sub-brand name, "Inzovhu," alongside cleaner, illustration-led packaging for the honey, granola and oats range.</p>
+          <ul class="quick-facts">
+            <li><span class="fact-label">Industry</span>Food &amp; Beverage / FMCG</li>
+            <li><span class="fact-label">Market</span>Zimbabwe &amp; regional export</li>
+            <li><span class="fact-label">Scope</span>Logo &amp; Identity System</li>
+            <li><span class="fact-label">Scope</span>Packaging Design (5 product lines)</li>
+            <li><span class="fact-label">Scope</span>Brand Guidelines</li>
+            <li><span class="fact-label">Scope</span>Sub-brand Naming — "Inzovhu"</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO SYSTEM -->
+    <div class="brandkit-block">
+      <p class="section-label">Identity System</p>
+      <h2 class="section-title">Logo &amp; <em>Variations</em></h2>
+      <p class="section-sub">A horizontal lockup for primary use, a stacked mark for square and narrow formats, and a reversed white-on-navy version for dark packaging and merchandise.</p>
+      <div class="variants-grid">
+        <div class="variant-card">
+          <div class="variant-card-img"><img src="breakfast_logo_concept_1_2_trans.png" alt="Breakfast Basket horizontal logo lockup"></div>
+          <div class="variant-card-label">Primary Lockup — Horizontal</div>
+        </div>
+        <div class="variant-card">
+          <div class="variant-card-img"><img src="logo_variation_stacked.png" alt="Breakfast Basket stacked logo variation"></div>
+          <div class="variant-card-label">Stacked Variation</div>
+        </div>
+        <div class="variant-card dark">
+          <div class="variant-card-img"><img src="logo_variation_reversed.png" alt="Breakfast Basket reversed white logo on navy"></div>
+          <div class="variant-card-label">Reversed — On Navy</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- COLOUR PALETTE -->
+    <div class="brandkit-block">
+      <p class="section-label">Colour System</p>
+      <h2 class="section-title">Colour <em>Palette</em></h2>
+      <p class="section-sub">A fixed three-colour system carried across every touchpoint — confident enough for export packaging, warm enough for a breakfast table.</p>
+      <div class="palette-grid">
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#2C3482;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Basket Navy</div>
+            <div class="swatch-hex">#2C3482</div>
+            <div class="swatch-role">Primary</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#107E40;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Harvest Green</div>
+            <div class="swatch-hex">#107E40</div>
+            <div class="swatch-role">Secondary</div>
+          </div>
+        </div>
+        <div class="palette-swatch">
+          <div class="swatch-color" style="background:#DFA628;"></div>
+          <div class="swatch-info">
+            <div class="swatch-name">Golden Wheat</div>
+            <div class="swatch-hex">#DFA628</div>
+            <div class="swatch-role">Accent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TYPOGRAPHY -->
+    <div class="brandkit-block">
+      <p class="section-label">Type System</p>
+      <h2 class="section-title">Typography</h2>
+      <p class="section-sub">Two paired display faces: a tall serif for structure and authority, and a looping script for warmth — never used for body copy, only for the wordmark and headline moments.</p>
+      <div class="type-card">
+        <img src="brand_typography.png" alt="Breakfast Basket typography specimen — Morefren Regular and Allright Regular">
+        <div class="type-caption">
+          <span><strong>Morefren Regular</strong> — "BREAKFAST", structure &amp; headlines</span>
+          <span><strong>Allright Regular</strong> — "Basket", the signature script</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKAGING GALLERY -->
+    <div class="brandkit-block" style="border-bottom:none; margin-bottom:0;">
+      <p class="section-label">Applications</p>
+      <h2 class="section-title">Packaging &amp; <em>Product Line</em></h2>
+      <p class="section-sub">Click any product to view it larger. The coffee range runs under its own sub-brand, "Inzovhu" (Shona for elephant), with a bolder black-and-gold identity for export; the wider grocery range keeps closer to the core white-and-illustration system.</p>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card" onclick="openModal('Inzovhu_Coffee_bag_Mockup.png', 'Inzovhu Rwandan Coffee — Medium Roast, Whole Bean')">
+          <div class="card-img-wrap">
+            <img src="Inzovhu_Coffee_bag_Mockup.png" alt="Inzovhu coffee bag mockup, gold and black, whole bean">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Coffee · Whole Bean</p><h3 class="card-title">Inzovhu — Medium Roast (Gold)</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('Inzovhu_Ground_Coffee_Mockup.jpeg', 'Inzovhu Rwandan Coffee — Medium Roast, Ground Coffee')">
+          <div class="card-img-wrap">
+            <img src="Inzovhu_Ground_Coffee_Mockup.jpeg" alt="Inzovhu ground coffee bag mockup, navy and blue">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Coffee · Ground</p><h3 class="card-title">Inzovhu — Medium Roast (Navy)</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('drip_coffee_package_mockup.png', 'Inzovhu Rwandan Coffee with Peppermint — Drip Bag')">
+          <div class="card-img-wrap">
+            <img src="drip_coffee_package_mockup.png" alt="Inzovhu peppermint drip coffee bag lifestyle mockup">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Coffee · Drip Bag</p><h3 class="card-title">Inzovhu — with Peppermint</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('drip_bag_flat_design.png', 'Inzovhu Drip Bag — Flat Packaging Design')">
+          <div class="card-img-wrap">
+            <img src="drip_bag_flat_design.png" alt="Inzovhu drip bag flat packaging artwork, geometric pattern">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Coffee · Flat Artwork</p><h3 class="card-title">Inzovhu — Print-ready Design</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('Honey_Jar_Mock_up.png', 'Breakfast Basket Organic Honey — 100% Natural')">
+          <div class="card-img-wrap">
+            <img src="Honey_Jar_Mock_up.png" alt="Breakfast Basket organic honey jar mockup">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Honey</p><h3 class="card-title">Organic Honey — 100% Natural</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('granola_cashew_cranberry.png', 'Crunchy Granola — Cashew and Cranberry')">
+          <div class="card-img-wrap">
+            <img src="granola_cashew_cranberry.png" alt="Breakfast Basket granola packaging, cashew and cranberry">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Cereal · Granola</p><h3 class="card-title">Crunchy Granola — Cashew &amp; Cranberry</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('granola_nut_fruit_seed.png', 'Crunchy Granola — Nut, Fruit and Seed')">
+          <div class="card-img-wrap">
+            <img src="granola_nut_fruit_seed.png" alt="Breakfast Basket granola packaging, nut fruit and seed">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Cereal · Granola</p><h3 class="card-title">Crunchy Granola — Nut, Fruit &amp; Seed</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('granola_berry_mix.png', 'Crunchy Granola — Berry Mix')">
+          <div class="card-img-wrap">
+            <img src="granola_berry_mix.png" alt="Breakfast Basket granola packaging, berry mix">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Cereal · Granola</p><h3 class="card-title">Crunchy Granola — Berry Mix</h3></div>
+        </div>
+
+        <div class="gallery-card" onclick="openModal('oats_design_2_1.png', '100% Wholegrain Oats — 400g')">
+          <div class="card-img-wrap">
+            <img src="oats_design_2_1.png" alt="Breakfast Basket wholegrain oats packaging design">
+            <div class="card-overlay"><div class="card-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
+          </div>
+          <div class="card-info"><p class="card-tag">Cereal · Oats</p><h3 class="card-title">100% Wholegrain Oats</h3></div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="back-bar">
+      <a href="index.html#portfolio" class="btn-primary magnetic">
+        ← Back to Main Website
       </a>
-      <a href="https://shop.littlenzou.com" target="_blank" class="btn-outline magnetic">
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-        Visit Shop
-      </a>
-    </div>
-  </div>
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span class="scroll-label">Scroll</span>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-inner">
-    <div class="about-grid">
-      <div class="about-visual reveal">
-        <div class="about-portrait-box">
-          <img src="me_again.png" alt="Little Nzou Portrait" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;">
-        </div>
-        <div class="portrait-badge">
-          <span class="num">15+</span>
-          <span class="lbl">Years<br>Creating</span>
-        </div>
-      </div>
-      <div class="about-text">
-        <p class="section-label reveal">About Little Nzou</p>
-        <h2 class="section-title reveal">The Little Elephant<br>Who <em>Remembers</em></h2>
-        <p class="section-sub reveal">In Shona, <em>nzou</em> means elephant, the animal that never forgets, that carries its heritage across vast distances. Little Nzou was born in Zimbabwe, raised on stories of the hare and the baboon, and arrived in Dubai with a Nikon D3400 camera, a design eye, and something to prove.</p>
-        <div class="about-philosophy reveal">
-          <p>"Great creativity doesn't shout, it resonates. Every frame, every logo, every motion sequence should carry a feeling the audience didn't expect but immediately recognises as true."</p>
-        </div>
-        <div class="about-pillars">
-          <div class="pillar reveal">
-            <div class="pillar-icon-line"></div>
-            <h4>Cinematic Vision</h4>
-            <p>Every project is treated as a visual story — composed, lit, and edited with intention.</p>
-          </div>
-          <div class="pillar reveal reveal-d1">
-            <div class="pillar-icon-line"></div>
-            <h4>African Heritage</h4>
-            <p>Afrocentric aesthetics and storytelling woven into modern digital design.</p>
-          </div>
-          <div class="pillar reveal reveal-d2">
-            <div class="pillar-icon-line"></div>
-            <h4>Modern Execution</h4>
-            <p>Built for the UAE's fast-moving market — responsive, on-brand, on brief.</p>
-          </div>
-          <div class="pillar reveal reveal-d3">
-            <div class="pillar-icon-line"></div>
-            <h4>Studio Precision</h4>
-            <p>Boutique quality with agency discipline. Every deliverable is production-ready.</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section id="portfolio">
-  <div class="section-inner">
-    <p class="section-label reveal">Selected Work</p>
-    <h2 class="section-title reveal">The Work <em>Speaks</em></h2>
-    <p class="section-sub reveal">Brand identities, motion graphics, and video productions crafted for clients across Dubai, the UAE, and beyond.</p>
-    <div class="portfolio-filters reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="brand">Brand Design</button>
-      <button class="filter-btn" data-filter="motion">Motion Graphics</button>
-      <button class="filter-btn" data-filter="video">Video</button>
-      <button class="filter-btn" data-filter="logo">Logo Design</button>
-    </div>
-
-    <div class="carousel-wrap reveal">
-      <div class="carousel-outer" id="port-outer">
-        <div class="carousel-track" id="port-track">
-          <!-- KHALID AL MANSOORI -->
-          <a class="port-card" data-cat="brand" href="Khalid_Al_Mansoori_Logo.png" target="_blank" aria-label="View Khalid Al Mansoori brand presentation">
-            <div class="port-card-inner" style="background:linear-gradient(to top, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0) 48%), url('Khalid_Al_Mansoori_Logo.png') center/78% no-repeat, #f7f4e8;">
-              <div class="port-overlay"><div class="port-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
-              <div class="port-meta"><p class="port-cat">Brand Identity</p><p class="port-name">Khalid Al Mansoori — Full Brand Kit</p></div>
-            </div>
-          </a>
-          <!-- LOGO GALLERY -->
-          <a class="port-card" data-cat="logo" href="logo_gallery.html" target="_self" aria-label="Open the Logo Gallery">
-            <div class="port-card-inner" style="background:linear-gradient(to top, rgba(10,10,10,0.82) 0%, rgba(10,10,10,0) 48%), url('Skyline_Leasing_white_bg.png') center/75% no-repeat, #ffffff;">
-              <div class="port-overlay"><div class="port-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
-              <div class="port-meta"><p class="port-cat">Logo Design</p><p class="port-name">Logo Gallery</p></div>
-            </div>
-          </a>
-          <!-- DESERT BLOOM -->
-          <a class="port-card" data-cat="motion" href="https://www.youtube.com/@littlenzoucreativestudio" target="_blank">
-            <div class="port-card-inner" style="background:linear-gradient(135deg,#2a1a10,#3e2210);">
-              <div class="port-overlay"><div class="port-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
-              <div class="port-meta"><p class="port-cat">Motion Graphics</p><p class="port-name">Desert Bloom — Title Sequence</p></div>
-            </div>
-          </a>
-          <!-- DUBAI MARINA REEL -->
-          <a class="port-card" data-cat="video" href="https://www.youtube.com/@littlenzoucreativestudio" target="_blank">
-            <div class="port-card-inner" style="background:linear-gradient(135deg,#0d1a2a,#0d2233);">
-              <div class="port-overlay"><div class="port-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
-              <div class="port-meta"><p class="port-cat">Video Production</p><p class="port-name">Dubai Marina — Promo Reel</p></div>
-            </div>
-          </a>
-          <!-- LUMA SKIN CLINIC -->
-          <a class="port-card" data-cat="brand" href="https://www.flickr.com/photos/200316724@N08/" target="_blank">
-            <div class="port-card-inner" style="background:linear-gradient(135deg,#1a1a10,#302e0a);">
-              <div class="port-overlay"><div class="port-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
-              <div class="port-meta"><p class="port-cat">Brand Kit</p><p class="port-name">Luma Skin Clinic</p></div>
-            </div>
-          </a>
-          <!-- REEL ADS PACK -->
-          <a class="port-card" data-cat="motion" href="https://www.instagram.com/little_nzou" target="_blank">
-            <div class="port-card-inner" style="background:linear-gradient(135deg,#1a0a1a,#2a102a);">
-              <div class="port-overlay"><div class="port-view-ring"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></div></div>
-              <div class="port-meta"><p class="port-cat">Motion / Social</p><p class="port-name">Reel Ads Pack — F&amp;B</p></div>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <div class="carousel-dots" id="port-dots"></div>
-        <button class="c-arrow" id="port-prev" aria-label="Previous">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="c-arrow" id="port-next" aria-label="Next">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- CASE STUDIES -->
-    <div style="margin-top:72px;">
-      <p class="section-label reveal">Case Studies</p>
-      <h3 class="section-title reveal" style="font-size:clamp(1.6rem,3vw,2.4rem);">The <em>Work</em> in Depth</h3>
-      <div class="carousel-wrap reveal">
-        <div class="carousel-outer" id="case-outer">
-          <div class="carousel-track" id="case-track">
-            <a class="case-card" href="breakfast_basket_brandkit.html">
-              <div class="case-card-head" style="background:linear-gradient(135deg,#2C3482,#107E40);"><span class="case-card-head-text">Basket</span></div>
-              <div class="case-body"><p class="case-tag">Brand Identity + Packaging · Zimbabwe</p><h4>Full Brand Kit — Breakfast Basket</h4><p>A Zimbabwean breakfast-foods house needed one identity system to hold together across coffee, honey, granola and oats. We delivered a complete visual identity — logo suite, colour and type standards, and a packaging design language — including an export-facing coffee sub-brand, "Inzovhu."</p></div>
-            </a>
-            <!-- LOGO GALLERY CASE CARD -->
-            <a class="case-card" href="logo_gallery.html">
-              <div class="case-card-head" style="background:linear-gradient(135deg,#006872,#0a7d88);"><span class="case-card-head-text">Skyline</span></div>
-              <div class="case-body"><p class="case-tag">Logo Design · Dubai</p><h4>Logo Gallery</h4><p>Click to view some of the logos we have created.</p></div>
-            </a>
-            <div class="case-card">
-              <div class="case-card-head" style="background:linear-gradient(135deg,#2a1a10,#4a2e18);"><span class="case-card-head-text">Desert Bloom</span></div>
-              <div class="case-body"><p class="case-tag">Motion Graphics · Short Film</p><h4>Title Sequence — Desert Bloom</h4><p>A UAE short film required opening titles and interstitial motion graphics to match its documentary-meets-cinematic style. We produced 4 minutes of composited motion work with custom typography animation.</p></div>
-            </div>
-            <div class="case-card">
-              <div class="case-card-head" style="background:linear-gradient(135deg,#0d1a2a,#122240);"><span class="case-card-head-text">Marina</span></div>
-              <div class="case-body"><p class="case-tag">Video Production · Real Estate</p><h4>Promo Reel — Dubai Marina Residences</h4><p>A property developer needed a 90-second promotional reel. We shot, edited, and colour-graded a cinematic walkthrough that increased inquiry conversion by 34% in the first month of deployment.</p></div>
-            </div>
-            <div class="case-card">
-              <div class="case-card-head" style="background:linear-gradient(135deg,#1a1215,#2a1a20);"><span class="case-card-head-text">Luma</span></div>
-              <div class="case-body"><p class="case-tag">Brand Kit + Social · Healthcare</p><h4>Digital Brand System — Luma Skin Clinic</h4><p>A dermatology clinic in JLT needed its visual identity rebuilt for digital-first use. We delivered a complete social media template kit, brand guidelines PDF, and bilingual asset library.</p></div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-controls">
-          <div class="carousel-dots" id="case-dots"></div>
-          <button class="c-arrow" id="case-prev" aria-label="Previous">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <button class="c-arrow" id="case-next" aria-label="Next">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
+<!-- LIGHTBOX MODAL -->
+<div class="modal" id="imageModal" onclick="closeModal(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal(event)">&times;</button>
+    <img id="modalImg" src="" alt="Expanded View" />
+    <div class="modal-caption" id="modalCaption"></div>
   </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <div class="section-inner">
-    <p class="section-label reveal">How We Work</p>
-    <h2 class="section-title reveal">From Brief to <em>Brilliance</em></h2>
-    <p class="section-sub reveal" style="color:rgba(255,255,255,0.55);">Every Little Nzou project follows a clear, collaborative process — so you always know where we are, what comes next, and what to expect at every stage.</p>
-
-    <div class="carousel-wrap reveal">
-      <div class="carousel-outer" id="proc-outer">
-        <div class="carousel-track" id="proc-track">
-          <div class="process-card">
-            <span class="process-step-num">01</span>
-            <div class="process-icon-line"></div>
-            <h3>Discovery &amp; Brief</h3>
-            <p>We start with a detailed consultation — exploring your goals, audience, competitors, and vision. A creative brief is drafted and agreed before any work begins.</p>
-            <p class="process-duration">Day 1 — 2</p>
-          </div>
-          <div class="process-card">
-            <span class="process-step-num">02</span>
-            <div class="process-icon-line"></div>
-            <h3>Moodboard &amp; Direction</h3>
-            <p>We present two to three distinct visual directions — each with a moodboard, colour palette, and tone of voice reference. You choose the path forward.</p>
-            <p class="process-duration">Day 3 — 5</p>
-          </div>
-          <div class="process-card">
-            <span class="process-step-num">03</span>
-            <div class="process-icon-line"></div>
-            <h3>Design &amp; Production</h3>
-            <p>The studio builds. Whether it is a logo suite, motion sequence, or video edit — work is developed with precision and regular progress updates shared throughout.</p>
-            <p class="process-duration">Day 6 — 14</p>
-          </div>
-          <div class="process-card">
-            <span class="process-step-num">04</span>
-            <div class="process-icon-line"></div>
-            <h3>Review &amp; Refinement</h3>
-            <p>You receive the first presentation with our rationale. Feedback is gathered and up to two rounds of revision are incorporated — structured, not open-ended.</p>
-            <p class="process-duration">Day 15 — 18</p>
-          </div>
-          <div class="process-card">
-            <span class="process-step-num">05</span>
-            <div class="process-icon-line"></div>
-            <h3>Final Approval</h3>
-            <p>Once the work is approved, final files are prepared across all required formats — print, digital, social, and broadcast as applicable to your project.</p>
-            <p class="process-duration">Day 19 — 20</p>
-          </div>
-          <div class="process-card">
-            <span class="process-step-num">06</span>
-            <div class="process-icon-line"></div>
-            <h3>Delivery &amp; Handover</h3>
-            <p>A structured deliverable pack is handed over — organised files, usage guidelines, and a short walkthrough so you can hit the ground running from day one.</p>
-            <p class="process-duration">Day 21</p>
-          </div>
-          <div class="process-card">
-            <span class="process-step-num">07</span>
-            <div class="process-icon-line"></div>
-            <h3>Post-Launch Support</h3>
-            <p>The relationship does not end at delivery. A two-week support window ensures any implementation questions or minor adjustments are handled without delay.</p>
-            <p class="process-duration">Day 22 — 35</p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <div class="carousel-dots" id="proc-dots"></div>
-        <button class="c-arrow" id="proc-prev" aria-label="Previous">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="c-arrow" id="proc-next" aria-label="Next">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SHOP -->
-<section id="shop">
-  <div class="section-inner">
-    <p class="section-label reveal">Digital Products</p>
-    <h2 class="section-title reveal">The <em>Shop</em></h2>
-    <p class="section-sub reveal">Ready-to-use creative tools built from real studio workflows. All products available at shop.littlenzou.com</p>
-    <div class="shop-cats reveal">
-      <button class="cat-pill active">All Products</button>
-      <button class="cat-pill">LUTs</button>
-      <button class="cat-pill">Presets</button>
-      <button class="cat-pill">Logo Templates</button>
-      <button class="cat-pill">Brand Templates</button>
-      <button class="cat-pill">Exclusive Licences</button>
-    </div>
-    <div class="carousel-wrap reveal">
-      <div class="carousel-outer" id="shop-outer">
-        <div class="carousel-track" id="shop-track">
-          <div class="shop-card">
-            <div class="shop-card-icon-line"></div>
-            <h3>Cinematic LUT Pack</h3>
-            <p>12 hand-crafted LUTs designed for golden-hour Dubai light. Works with Premiere Pro, DaVinci Resolve, and Final Cut.</p>
-            <p class="shop-price">From AED 79</p>
-            <a href="https://shop.littlenzou.com" target="_blank" class="btn-shop">Buy Now</a>
-          </div>
-          <div class="shop-card">
-            <div class="shop-card-icon-line"></div>
-            <h3>Lightroom Preset Collection</h3>
-            <p>20 presets tuned for Dubai architecture, portraiture, and landscape. One-click warmth with cinematic depth.</p>
-            <p class="shop-price">From AED 59</p>
-            <a href="https://shop.littlenzou.com" target="_blank" class="btn-shop">Buy Now</a>
-          </div>
-          <div class="shop-card">
-            <div class="shop-card-icon-line"></div>
-            <h3>Logo Template Kits</h3>
-            <p>Editable AI/EPS logo templates for F&amp;B, wellness, and real estate. Fully layered with font files included.</p>
-            <p class="shop-price">From AED 149</p>
-            <a href="https://shop.littlenzou.com" target="_blank" class="btn-shop">Buy Now</a>
-          </div>
-          <div class="shop-card">
-            <div class="shop-card-icon-line"></div>
-            <h3>Brand Kit Templates</h3>
-            <p>Canva and Figma brand kit templates built to agency spec — colour palette, typography, and social assets included.</p>
-            <p class="shop-price">From AED 199</p>
-            <a href="https://shop.littlenzou.com" target="_blank" class="btn-shop">Buy Now</a>
-          </div>
-          <div class="shop-card">
-            <div class="shop-card-icon-line"></div>
-            <h3>Social Video Templates</h3>
-            <p>After Effects and Premiere Pro templates for Instagram Reels and TikTok. Customisable text, colours, and logo placement.</p>
-            <p class="shop-price">From AED 99</p>
-            <a href="https://shop.littlenzou.com" target="_blank" class="btn-shop">Buy Now</a>
-          </div>
-          <div class="shop-card">
-            <div class="shop-card-icon-line"></div>
-            <h3>Exclusive Single Licence</h3>
-            <p>A one-of-a-kind logo or brand mark with full exclusive rights transfer. Your design, owned entirely by you.</p>
-            <p class="shop-price">From AED 1,200</p>
-            <a href="https://shop.littlenzou.com" target="_blank" class="btn-shop">Enquire</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <div class="carousel-dots" id="shop-dots"></div>
-        <button class="c-arrow" id="shop-prev" aria-label="Previous">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="c-arrow" id="shop-next" aria-label="Next">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-    <div class="shop-banner reveal">
-      <div>
-        <h3>Browse the full collection</h3>
-        <p>New products added monthly. Follow for early access drops and bundle deals.</p>
-      </div>
-      <a href="https://shop.littlenzou.com" target="_blank" class="btn-primary" style="border-color:#fff;background:#fff;color:#0A0A0A;">Visit Shop</a>
-    </div>
-  </div>
-</section>
-
-<!-- TUTORIALS -->
-<section id="tutorials">
-  <div class="section-inner">
-    <p class="section-label reveal">YouTube Tutorials</p>
-    <h2 class="section-title reveal">Learn the <em>Craft</em></h2>
-    <p class="section-sub reveal">Behind-the-scenes process, tool walkthroughs, and creative tutorials — straight from the studio. Subscribe on YouTube for new episodes.</p>
-    <div class="carousel-wrap reveal">
-      <div class="carousel-outer" id="tut-outer">
-        <div class="carousel-track" id="tut-track">
-          
-          <!-- TUTORIAL 1 -->
-          <a class="tut-card" href="https://youtu.be/2xLrWGAuzDU?si=7Gs0dbWUTrU4rFs3" target="_blank" rel="noopener noreferrer">
-            <div class="tut-thumb" style="background:linear-gradient(135deg,#005c53,#042940);">
-              <div class="play-ring">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A0A0A"><path d="M5 3l14 9-14 9V3z"/></svg>
-              </div>
-            </div>
-            <div class="tut-body">
-              <p class="tut-tag">GIMP · Social Media Design</p>
-              <h4>GIMP TUTORIAL | How to design an Instagram Post or Flyer from scratch in GIMP</h4>
-              <p>Learn step-by-step how to design clean, professional social media posts and promotional flyers using GIMP.</p>
-              <span class="tut-link">Watch on YouTube <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-
-          <!-- TUTORIAL 2 -->
-          <a class="tut-card" href="https://youtu.be/0bljV8_gXrg" target="_blank" rel="noopener noreferrer">
-            <div class="tut-thumb" style="background:linear-gradient(135deg,#1A1A2E,#2d2d5e);">
-              <div class="play-ring">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A0A0A"><path d="M5 3l14 9-14 9V3z"/></svg>
-              </div>
-            </div>
-            <div class="tut-body">
-              <p class="tut-tag">Design · Tutorial</p>
-              <h4>How to create a professional business flyer in Gimp (part 1)</h4>
-              <p>Learn how to design a professional business flyer from scratch using GIMP, covering layout, typography, and design principles.</p>
-              <span class="tut-link">Watch on YouTube <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-
-          <!-- TUTORIAL 3 -->
-          <a class="tut-card" href="https://youtu.be/cf0mAnPUEBM" target="_blank" rel="noopener noreferrer">
-            <div class="tut-thumb" style="background:linear-gradient(135deg,#1e2a1a,#2e4020);">
-              <div class="play-ring">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A0A0A"><path d="M5 3l14 9-14 9V3z"/></svg>
-              </div>
-            </div>
-            <div class="tut-body">
-              <p class="tut-tag">Design · Business Card</p>
-              <h4>How to Design a Business Card with a Polygon Background</h4>
-              <p>Master the art of creating a modern business card design using polygon shapes and creative background techniques.</p>
-              <span class="tut-link">Watch on YouTube <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-
-          <!-- TUTORIAL 4 -->
-          <a class="tut-card" href="https://youtu.be/5xUlLYXtSc8" target="_blank" rel="noopener noreferrer">
-            <div class="tut-thumb" style="background:linear-gradient(135deg,#2a1a10,#4a2e18);">
-              <div class="play-ring">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="#0A0A0A"><path d="M5 3l14 9-14 9V3z"/></svg>
-              </div>
-            </div>
-            <div class="tut-body">
-              <p class="tut-tag">AI · Design · Merchandise</p>
-              <h4>GIMP TUTORIAL HOW I USE AI TO CREATE T SHIRT/ HOODIE DESIGNS</h4>
-              <p>Discover how to leverage AI technology combined with GIMP to create stunning t-shirt and hoodie designs from scratch.</p>
-              <span class="tut-link">Watch on YouTube <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg></span>
-            </div>
-          </a>
-
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <div class="carousel-dots" id="tut-dots"></div>
-        <button class="c-arrow" id="tut-prev" aria-label="Previous">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <button class="c-arrow" id="tut-next" aria-label="Next">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-inner">
-    <p class="section-label reveal">Let's Create Together</p>
-    <h2 class="section-title reveal">Start a <em>Project</em></h2>
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <h3>Got a brief?<br>Let's hear it.</h3>
-        <p>Whether you're launching a brand, need a promo video, or want motion work that actually moves people — Little Nzou is built for briefs like yours. Dubai-based, globally minded.</p>
-        
-        <h4>Contact Us</h4>
-        <div class="contact-row">
-          <div class="contact-row-line"></div>
-          <div class="contact-row-text">Phone — <a href="tel:+9710001234567">+971 000 123 4567</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-row-line"></div>
-          <div class="contact-row-text">Email — <a href="mailto:info@littlenzou.com">info@littlenzou.com</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-row-line"></div>
-          <div class="contact-row-text">Shop — <a href="https://shop.littlenzou.com" target="_blank">shop.littlenzou.com</a></div>
-        </div>
-        <div class="contact-row">
-          <div class="contact-row-line"></div>
-          <div class="contact-row-text">Based in Dubai, United Arab Emirates</div>
-        </div>
-        <div class="social-links">
-          <a href="https://www.instagram.com/little_nzou?igsh=bjczdmdvZmV6cjFh&utm_source=qr" target="_blank" class="social-link" aria-label="Instagram">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke-width="2.5"/></svg>
-          </a>
-          <a href="https://www.facebook.com/share/1Cy2Zhy9LP/?mibextid=wwXIfr" target="_blank" class="social-link" aria-label="Facebook">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="https://www.youtube.com/@littlenzoucreativestudio" target="_blank" class="social-link" aria-label="YouTube">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/company/little-nzou/?viewAsMember=true" target="_blank" class="social-link" aria-label="LinkedIn">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-        </div>
-      </div>
-      <div class="contact-map reveal">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28872.263884848525!2d55.25364848148812!3d25.185202868953185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xff45e502e1ceb7e2!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </div>
-</section>
+</div>
 
 <!-- FOOTER -->
 <footer>
@@ -1220,12 +710,12 @@ footer { background: var(--black); padding: 52px 24px 32px; position: relative; 
         <div class="footer-tagline">Imagination &nbsp;·&nbsp; Inspiration &nbsp;·&nbsp; Manifestation</div>
       </div>
       <ul class="footer-nav">
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#process">Process</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#tutorials">Tutorials</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#portfolio">Portfolio</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#shop">Shop</a></li>
+        <li><a href="index.html#tutorials">Tutorials</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
         <li><a href="https://shop.littlenzou.com" target="_blank">Digital Shop</a></li>
       </ul>
     </div>
@@ -1288,148 +778,26 @@ function drawFrame() {
 }
 drawFrame();
 
-// NAV
+// NAV TOGGLE
 const nav = document.getElementById('main-nav');
 window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40));
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
 hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
-navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-// SCROLL REVEAL
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); }});
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
-
-// CAROUSEL FACTORY
-function makeCarousel(trackId, outerId, prevId, nextId, dotsId, itemW) {
-  const track = document.getElementById(trackId);
-  const outer = document.getElementById(outerId);
-  const prevBtn = document.getElementById(prevId);
-  const nextBtn = document.getElementById(nextId);
-  const dotsEl = document.getElementById(dotsId);
-  if(!track || !outer) return;
-
-  const GAP = 24;
-  let current = 0;
-  let dragStartX = 0, isDragging = false, dragDelta = 0;
-
-  function visibleCount() {
-    return Math.max(1, Math.floor((outer.offsetWidth + GAP) / (itemW + GAP)));
-  }
-  function itemCount() { return track.children.length; }
-  function maxIndex() { return Math.max(0, itemCount() - visibleCount()); }
-
-  function buildDots() {
-    if(!dotsEl) return;
-    dotsEl.innerHTML = '';
-    const total = maxIndex() + 1;
-    for(let i = 0; i < total; i++) {
-      const d = document.createElement('div');
-      d.className = 'c-dot' + (i === current ? ' active' : '');
-      d.addEventListener('click', () => go(i));
-      dotsEl.appendChild(d);
-    }
-  }
-
-  function updateButtons() {
-    if(prevBtn) prevBtn.classList.toggle('disabled', current === 0);
-    if(nextBtn) nextBtn.classList.toggle('disabled', current >= maxIndex());
-  }
-
-  function go(idx) {
-    current = Math.max(0, Math.min(idx, maxIndex()));
-    const offset = current * (itemW + GAP);
-    track.style.transform = `translateX(-${offset}px)`;
-    buildDots();
-    updateButtons();
-  }
-
-  if(prevBtn) prevBtn.addEventListener('click', () => go(current - 1));
-  if(nextBtn) nextBtn.addEventListener('click', () => go(current + 1));
-
-  // Touch / drag
-  // NOTE: pointer capture is only taken once the user has actually dragged,
-  // so a plain click/tap still reaches the <a> links inside the cards.
-  const DRAG_THRESHOLD = 8;
-  let pointerDown = false, suppressClick = false;
-
-  outer.addEventListener('dragstart', e => e.preventDefault()); // stop native link/image ghost-dragging
-
-  outer.addEventListener('pointerdown', e => {
-    if(e.pointerType === 'mouse' && e.button !== 0) return;
-    pointerDown = true; isDragging = false; suppressClick = false;
-    dragStartX = e.clientX; dragDelta = 0;
-  });
-  outer.addEventListener('pointermove', e => {
-    if(!pointerDown) return;
-    dragDelta = e.clientX - dragStartX;
-    if(!isDragging && Math.abs(dragDelta) > DRAG_THRESHOLD) {
-      isDragging = true;
-      track.style.transition = 'none';
-      try { outer.setPointerCapture(e.pointerId); } catch(_) {}
-    }
-    if(isDragging) {
-      const base = current * (itemW + GAP);
-      track.style.transform = `translateX(${-base + dragDelta}px)`;
-    }
-  });
-  function endDrag() {
-    if(!pointerDown) return;
-    pointerDown = false;
-    if(isDragging) {
-      isDragging = false;
-      suppressClick = true;              // it was a swipe, not a click
-      track.style.transition = '';
-      if(dragDelta < -60) go(current + 1);
-      else if(dragDelta > 60) go(current - 1);
-      else go(current);
-      setTimeout(() => { suppressClick = false; }, 0);
-    }
-  }
-  outer.addEventListener('pointerup', endDrag);
-  outer.addEventListener('pointercancel', endDrag);
-  // If the user dragged, swallow the click so a swipe never opens a link
-  outer.addEventListener('click', e => {
-    if(suppressClick) { e.preventDefault(); e.stopPropagation(); suppressClick = false; }
-  }, true);
-
-  window.addEventListener('resize', () => { go(Math.min(current, maxIndex())); });
-
-  buildDots();
-  updateButtons();
+// LIGHTBOX LOGIC
+function openModal(imgSrc, caption) {
+  const modal = document.getElementById('imageModal');
+  document.getElementById('modalImg').src = imgSrc;
+  document.getElementById('modalCaption').innerText = caption;
+  modal.classList.add('open');
 }
 
-// Init carousels
-makeCarousel('port-track',  'port-outer',  'port-prev',  'port-next',  'port-dots',  340);
-makeCarousel('case-track',  'case-outer',  'case-prev',  'case-next',  'case-dots',  360);
-makeCarousel('proc-track',  'proc-outer',  'proc-prev',  'proc-next',  'proc-dots',  300);
-makeCarousel('shop-track',  'shop-outer',  'shop-prev',  'shop-next',  'shop-dots',  300);
-makeCarousel('tut-track',   'tut-outer',   'tut-prev',   'tut-next',   'tut-dots',   340);
-
-// PORTFOLIO FILTER
-document.querySelectorAll('.filter-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('#port-track .port-card').forEach(card => {
-      const show = filter === 'all' || card.dataset.cat === filter;
-      card.style.opacity = show ? '1' : '0.22';
-      card.style.transform = show ? '' : 'scale(0.97)';
-      card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-    });
-  });
-});
-
-// SHOP CATEGORY PILLS
-document.querySelectorAll('.cat-pill').forEach(pill => {
-  pill.addEventListener('click', () => {
-    document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
-    pill.classList.add('active');
-  });
-});
+function closeModal(e) {
+  if (e.target.id === 'imageModal' || e.target.classList.contains('modal-close')) {
+    document.getElementById('imageModal').classList.remove('open');
+  }
+}
 
 /* ============================================================
    CURSOR FX — glow cursor, magnetic buttons/links, hero parallax
@@ -1478,7 +846,7 @@ document.querySelectorAll('.cat-pill').forEach(pill => {
   });
 
   // Enlarge the dot over anything clickable, so the cursor itself signals interactivity
-  const hoverTargets = 'a, button, .filter-btn, .cat-pill, .c-arrow, .c-dot, .pillar, .port-card, .case-card';
+  const hoverTargets = 'a, button, .gallery-card, .card-view-ring, .modal-close';
   document.querySelectorAll(hoverTargets).forEach(el => {
     el.addEventListener('mouseenter', () => dot.classList.add('dot-hover'));
     el.addEventListener('mouseleave', () => dot.classList.remove('dot-hover'));
@@ -1507,7 +875,7 @@ document.querySelectorAll('.cat-pill').forEach(pill => {
 
   /* ---- 3. Hero parallax on scroll ---- */
   const parallaxEls = Array.from(document.querySelectorAll('[data-parallax]'));
-  const heroSection = document.getElementById('home');
+  const heroSection = document.getElementById('page-header');
   let ticking = false;
 
   function updateParallax() {
@@ -1543,10 +911,8 @@ document.querySelectorAll('.cat-pill').forEach(pill => {
     'a', 'button', 'input', 'textarea', 'select', 'label', 'svg',
     'p', 'h1', 'h2', 'h3', 'h4', 'span', 'li',
     '.magnetic', '.nav-logo-container', 'nav',
-    '.port-card', '.case-card', '.process-card', '.shop-card', '.tut-card', '.pillar',
-    '.c-arrow', '.c-dot', '.filter-btn', '.cat-pill',
-    '.section-label', '.section-title', '.section-sub',
-    '.about-philosophy', '.portrait-badge', '.contact-row', '.social-links',
+    '.gallery-card', '.card-info', '.card-overlay', '.modal', '.modal-content',
+    '.page-eyebrow', '.page-title', '.page-sub', '.footer-nav',
     '#cursor-glow', '#cursor-dot', '#idle-elephant'
   ].join(', ');
 
